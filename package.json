@@ -1,0 +1,26 @@
+{
+  "name": "skailama_assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "cors": "^2.8.6",
+    "dayjs": "^1.11.20",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "lucide-react": "^1.7.0",
+    "mongoose": "^9.4.1",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
