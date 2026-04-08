@@ -5,7 +5,7 @@ import profileRoutes from "./routes/profileRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //? DB CONNECTION
 main().catch((err) => console.log("DB Error:", err));
