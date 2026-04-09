@@ -8,6 +8,7 @@ export const useAppStore = create((set, get) => ({
   events: [],
   activeProfile: null,
   eventLogs: [],
+  isFetchingLogs: false,
 
   setActiveProfile: (profile) => set({ activeProfile: profile }),
   fetchProfiles: async () => {
@@ -56,9 +57,10 @@ export const useAppStore = create((set, get) => ({
   },
   fetchEventLogs: async (eventId) => {
     try {
+      set({ isFetchingLogs: true });
       const response = await axios.get(`${API_URL}/events/${eventId}/logs`);
-      console.log(response.data , "LOGS RESPONSE");
-      set({ eventLogs: response.data.logs });
+      console.log(response.data, "LOGS RESPONSE");
+      set({ eventLogs: response.data.logs, isFetchingLogs: false });
     } catch (error) {
       console.error("Failed to fetch event logs:", error);
       alert("Error fetching event logs.");

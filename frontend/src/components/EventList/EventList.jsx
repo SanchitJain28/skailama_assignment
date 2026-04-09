@@ -15,6 +15,7 @@ const EventList = () => {
     updateEvent,
     fetchEventLogs,
     eventLogs,
+    isFetchingLogs,
   } = useAppStore();
   const [editingId, setEditingId] = useState(null);
   const [viewingLogsFor, setViewingLogsFor] = useState(null);
@@ -79,6 +80,7 @@ const EventList = () => {
     if (viewingLogsFor === eventId) {
       setViewingLogsFor(null);
     } else {
+
       await fetchEventLogs(eventId);
       setViewingLogsFor(eventId);
       setEditingId(null);
@@ -217,7 +219,7 @@ const EventList = () => {
                     fontSize: "0.85rem",
                   }}
                 >
-                  Logs
+                 {isFetchingLogs ? "Loading..." : "Logs"}
                 </button>
                 <button
                   onClick={() => startEdit(event)}
