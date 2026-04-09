@@ -8,6 +8,7 @@ import styles from "./EventList.module.css";
 import { useAppStore } from "../../store/useAppStore";
 
 const EventList = () => {
+  
   const {
     events,
     fetchEvents,
