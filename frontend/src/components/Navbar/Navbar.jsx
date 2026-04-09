@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styles from "./Navbar.module.css";
-import { useAppStore } from "../../hooks/useAppStore";
+import { useAppStore } from "../../store/useAppStore";
 
 const Navbar = () => {
   const { profiles, fetchProfiles, activeProfile, setActiveProfile } =
@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>📅 Skai Events</div>
+      <div className={styles.logo}> Skai Events</div>
 
       <div className={styles.profileSelector}>
         <label htmlFor="profile-select">Viewing as:</label>
@@ -41,7 +41,7 @@ const Navbar = () => {
         {/* Display the active timezone like a pro */}
         {activeProfile && (
           <span className={styles.timezoneDisplay}>
-            🌍 {activeProfile.timezone}
+             {activeProfile.timezone}
           </span>
         )}
       </div>

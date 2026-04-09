@@ -1,0 +1,61 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.warning {
+  background: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffeeba;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border : 1px solid black
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.desc {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.timeBlock {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.timeRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.profilesList {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #e9ecef;
+  color: #333;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}

@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import ProfileForm from "./components/ProfileForm/ProfileForm";
+import EventForm from "./components/EventForm/EventForm";
+import EventList from "./components/EventList/EventList";
 
 function App() {
   return (
@@ -8,9 +10,10 @@ function App() {
       <div className="dashboard-container">
         <div className="left-panel">
           <ProfileForm />
+          <EventForm/>
         </div>
         <div className="right-panel">
-          <h2>Events Feed (Coming next...)</h2>
+          <EventList />
         </div>
       </div>
     </>

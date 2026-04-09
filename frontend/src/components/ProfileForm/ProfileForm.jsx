@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useAppStore } from "../../hooks/useAppStore";
 import { TIMEZONES } from "../../utils/timeUtils";
 import styles from "./ProfileForm.module.css";
+import { useAppStore } from "../../store/useAppStore";
 
 const ProfileForm = () => {
   const { createProfile } = useAppStore();
